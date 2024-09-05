@@ -1,0 +1,186 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for a techy look */
+    background: #000; /* Dark background */
+    color: #0f0; /* Neon green text */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  /* Navbar styles */
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent dark background */
+    border-bottom: 1px solid #0f0; /* Neon green border */
+    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.5); /* Enhanced neon shadow */
+    position: relative;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Blur effect for glass-like appearance */
+  }
+  
+  .logo h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #0f0; /* Neon green for logo text */
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .logo h2 span {
+    color: #ff007f; /* Neon pink accent color */
+  }
+  
+  .menu-link ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu-link li {
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .menu-link a {
+    color: #0f0;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .menu-link a:hover {
+    color: #ff007f; /* Neon pink on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    text-shadow: 0 0 10px #ff007f; /* Glowing text effect */
+  }
+  
+  .social-media-desktop {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .social-media-desktop li {
+    margin-left: 20px;
+  }
+  
+  .social-media-desktop a {
+    color: #0f0;
+    font-size: 28px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-media-desktop a:hover {
+    color: #ff007f; /* Neon pink on hover */
+    transform: scale(1.2); /* Slightly increase size on hover */
+  }
+  
+  /* Hero Section styles */
+  .hero-section {
+    background: url("C:\Users\anand chouhan\Downloads\kasia-derenda-7Ss09bTO5Zo-unsplash.jpg") no-repeat center center/cover; /* Background image */
+    color: #0f0; /* Neon green text */
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 0, 0.2); /* Semi-transparent neon green overlay */
+    z-index: -1;
+  }
+  
+  .hero-section p {
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: 2px;
+    animation: glitch 1.5s infinite; /* Glitch animation */
+  }
+  
+  .hero-section h1 {
+    font-size: 56px;
+    margin: 10px 0 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; /* Neon green glow */
+    animation: glitch 1.5s infinite; /* Glitch animation */
+  }
+  
+  /* Glitch Animation */
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translate(-5px, -5px);
+      opacity: 0.7;
+    }
+    40% {
+      transform: translate(5px, 5px);
+      opacity: 0.5;
+    }
+    60% {
+      transform: translate(-5px, 5px);
+      opacity: 0.3;
+    }
+    80% {
+      transform: translate(5px, -5px);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translate(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Terminal Input Effect */
+  .terminal-input {
+    position: relative;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .terminal-input::after {
+    content: '|';
+    position: absolute;
+    right: -10px;
+    animation: blink 1s step-start infinite;
+  }
+  
+  /* Cursor Blink Animation */
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .menu-link ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu-link li {
+      margin: 10px 0;
+    }
+  
+    .social-media-desktop {
+      margin-top: 10px;
+    }
+  }
+  
